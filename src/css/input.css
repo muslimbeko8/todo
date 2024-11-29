@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bagrorund{
+    background: rgb(131,35,157);
+background: linear-gradient(131deg, rgba(131,35,157,1) 0%, rgba(17,172,204,1) 100%);
+}

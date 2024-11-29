@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body class="flex flex-col h-full">
+    <header></header>
+
+    <main class="bagrorund grow">
+      <div class="flex flex-col max-w-96 w-full mx-auto">
+        <form id="todoForm" class="py-10 flex flex-col gap-5">
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text">Nima ish bajarasiz?</span>
+            </div>
+            <input
+              required
+              name="todoName"
+              type="text"
+              placeholder="Topshiriq nomini yozing"
+              class="input input-bordered w-full"
+            />
+            <div class="label"></div>
+          </label>
+          <label class="form-control">
+            <div class="label">
+              <span class="label-text">Topshiriq haqida</span>
+            </div>
+            <textarea
+              name="todoBody"
+              class="textarea textarea-bordered h-24"
+              placeholder="Topshiriq haqida qisqacha yozing"
+            ></textarea>
+          </label>
+          <button class="btn btn-active btn-neutral w-full" type="submit">
+            Jo'natish
+          </button>
+        </form>
+        <ul class="flex flex-col gap-3" id="todosParent"></ul>
+      </div>
+
+      <template id="todoTemplate">
+        <li class="card bg-base-100 w-96 shadow-xl todo-item">
+          <div class="card-body">
+            <h2 class="card-title" id="todoTitle"></h2>
+
+            <p
+              class="text-ellipsis whitespace-normal break-words"
+              id="todoBody"
+            ></p>
+            <div class="form-control">
+              <label class="label cursor-pointer">
+                <span class="label-text">Topshiriq bajarilganmi</span>
+                <input id="todoCheckbox" type="checkbox" class="checkbox" />
+              </label>
+            </div>
+            <button class="btn btn-error" id="deleteTodo">Delete</button>
+          </div>
+        </li>
+      </template>
+    </main>
+    <footer></footer>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>
